@@ -23,6 +23,8 @@ class purchaseController extends Controller
         $email = $request->customer_email;
         $product_id = $request->product_id;
 
+        // dd($product_id);
+
         $res_price = [];
         foreach ($product_id as $res) {
             $prices = Product::where('id', $res)->pluck('price');
@@ -122,7 +124,9 @@ class purchaseController extends Controller
 
         ];
 
-        return $invoice_summary;
+        // dd($invoice_summary);
+
+        // return $invoice_summary;
 
         $data = [
             'five_hundred' => isset($request->five_hundred) ? $request->five_hundred : 0,
@@ -135,8 +139,12 @@ class purchaseController extends Controller
             'one' => isset($request->one) ? $request->one : 0,
         ];
 
+        // dd($data);
+
 
         $purchase_data = Purchase::all();
+
+        // dd($purchase_data);
 
         $message = "Here Your Bill Thank you  !!";
 
