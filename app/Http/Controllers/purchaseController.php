@@ -144,7 +144,6 @@ class purchaseController extends Controller
 
         $purchase_data = Purchase::all();
 
-        // dd($purchase_data);
 
         $message = "Here Your Bill Thank you  !!";
 
